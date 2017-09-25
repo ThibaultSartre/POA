@@ -11,8 +11,6 @@ public abstract class Contrat {
 
     private Date debut;
 
-    private Date fin;
-
     public double getSalaire() {
 
         return salaire;
