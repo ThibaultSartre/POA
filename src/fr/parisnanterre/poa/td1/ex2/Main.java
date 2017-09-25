@@ -5,8 +5,7 @@ package fr.parisnanterre.poa.td1.ex2;
  */
 public class Main {
     public static void main(String[] args) {
-        EnseignantPermanent test = new EnseignantPermanent("Thibault", "Sartre", "32", 50, null, "Langage C") {
-        };
+        Professeur test = new Professeur("Thibault", "Sartre", "32", 50, null, "Langage C");
         System.out.println(test.toString());
     }
 }
