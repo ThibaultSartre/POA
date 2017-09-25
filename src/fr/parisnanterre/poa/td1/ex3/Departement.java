@@ -8,18 +8,17 @@ import java.util.ArrayList;
  * Created by thsartre on 25/09/2017.
  */
 public abstract class Departement {
-    ArrayList<Personnel> listPersonnel;
-    String libelle;
+    protected ArrayList<Personnel> listPersonnel;
 
-    public Departement(String libelle) {
+    public Departement() {
         this.listPersonnel = new ArrayList<Personnel>();
-        this.libelle = libelle;
     }
 
-    @Override
-    public String toString() {
-        return "Departement{" +
-                "libelle='" + libelle + '\'' +
-                '}';
+    public void ajouterPersonnel(Personnel personnel){
+        listPersonnel.add(personnel);
+    }
+
+    public ArrayList<Personnel> getListPersonnel() {
+        return listPersonnel;
     }
 }

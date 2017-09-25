@@ -5,7 +5,4 @@ package fr.parisnanterre.poa.td1.ex3;
  */
 public class Langues extends Departement {
 
-    public Langues(String libelle) {
-        super(libelle);
-    }
 }
