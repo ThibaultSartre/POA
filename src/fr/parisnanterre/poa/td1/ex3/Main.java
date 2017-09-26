@@ -1,6 +1,4 @@
-package fr.parisnanterre.poa.td1.ex2;
-
-import fr.parisnanterre.poa.td1.ex3.Gestion;
+package fr.parisnanterre.poa.td1.ex3;
 
 /**
  * Created by thsartre on 25/09/2017.

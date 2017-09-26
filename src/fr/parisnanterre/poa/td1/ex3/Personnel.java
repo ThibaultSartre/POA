@@ -1,4 +1,4 @@
-package fr.parisnanterre.poa.td1.ex2;
+package fr.parisnanterre.poa.td1.ex3;
 
 import fr.parisnanterre.poa.td1.ex3.Departement;
 
