@@ -16,7 +16,7 @@ public abstract class Departement {
         listPersonnel.add(personnel);
     }
 
-    public ArrayList<Personnel> getListPersonnel() {
+    ArrayList<Personnel> getListPersonnel() {
         return listPersonnel;
     }
 }
