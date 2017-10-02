@@ -17,15 +17,15 @@ public class SEGMI extends UFR {
         this.gestion = ges;
     }
 
-    public Mathematiques getMath() {
+    public Mathematiques getMathematique() {
         return mathematique;
     }
 
-    public Informatiques getInfo() {
+    public Informatiques getInformatique() {
         return informatique;
     }
 
-    public Gestion getGes() {
+    public Gestion getGestion() {
         return gestion;
     }
 }
