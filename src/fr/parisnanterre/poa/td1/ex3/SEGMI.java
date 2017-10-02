@@ -5,27 +5,27 @@ package fr.parisnanterre.poa.td1.ex3;
  */
 public class SEGMI extends UFR {
 
-    private Mathematiques math;
+    private Mathematiques mathematique;
 
-    private Informatiques info;
+    private Informatiques informatique;
 
-    private Gestion ges;
+    private Gestion gestion;
 
     public SEGMI(Mathematiques math,Informatiques info, Gestion ges){
-        this.math = math;
-        this.info = info;
-        this.ges = ges;
+        this.mathematique = math;
+        this.informatique = info;
+        this.gestion = ges;
     }
 
     public Mathematiques getMath() {
-        return math;
+        return mathematique;
     }
 
     public Informatiques getInfo() {
-        return info;
+        return informatique;
     }
 
     public Gestion getGes() {
-        return ges;
+        return gestion;
     }
 }
