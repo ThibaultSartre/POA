@@ -29,16 +29,16 @@ public class RockPaperScissorsTest {
     public void testPlayWIN(String p1,String p2) throws Exception {
         assertEquals(rps.play(RPSEnum.valueOf(p1), RPSEnum.valueOf(p2)),Result.WIN);
     }
-/*
-    @Parameters({"paper","rock"})
+
+    @Parameters({"paper","scissors"})
     @Test
     public void testPlayLOST(String p1,String p2) throws Exception {
         assertEquals(rps.play(RPSEnum.valueOf(p1), RPSEnum.valueOf(p2)),Result.LOST);
     }
 
-    @Parameters({"paper","rock"})
+    @Parameters({"paper","paper"})
     @Test
     public void testPlayTIE(String p1,String p2) throws Exception {
         assertEquals(rps.play(RPSEnum.valueOf(p1), RPSEnum.valueOf(p2)),Result.TIE);
-    }*/
+    }
 }
