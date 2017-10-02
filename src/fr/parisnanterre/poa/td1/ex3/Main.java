@@ -12,7 +12,6 @@ public class Main {
         test.ajouterDepartement(dep);
         SEGMI seg = new SEGMI(null,null,dep);
         Gestion gestion = seg.getGestion();
-        ArrayList<Personnel> liste = gestion.getListPersonnel();
-        System.out.println(liste.get(0).getDepartement().getListPersonnel().get(0));
+        System.out.println(gestion.getListPersonnel().get(0));
     }
 }
