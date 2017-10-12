@@ -16,7 +16,7 @@ public class RockPaperScissors {
             return Result.TIE;
         if ((p1.getName() == "paper" && p2.getName() == "scissors") ||
                 (p1.getName() == "scissors" && p2.getName() == "rock") ||
-                (p1.getName() == "paper" && p2.getName() == "rock"))
+                (p1.getName() == "rock" && p2.getName() == "paper"))
             return Result.LOST;
         return null;
     }
