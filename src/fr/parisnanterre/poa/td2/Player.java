@@ -21,6 +21,7 @@ public class Player {
         this.nom = nom;
         this.score = 0;
         this.nb_mouvement = nb_mouvement;
+        this.listCoups = new ArrayList<RPSEnum>();
         for(int i = 0; i < this.nb_mouvement; i++){
             switch((int) (Math.random() * 2)){
                 case 0 :
@@ -56,5 +57,9 @@ public class Player {
         RPSEnum rep = listCoups.get(0);
         listCoups.remove(0);
         return rep;
+    }
+
+    public void setScore() {
+        this.score++;
     }
 }

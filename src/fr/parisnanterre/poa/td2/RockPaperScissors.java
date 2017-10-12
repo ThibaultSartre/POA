@@ -20,4 +20,34 @@ public class RockPaperScissors {
             return Result.LOST;
         return null;
     }
+
+    public Result play(Player p1, Player p2){
+        RPSEnum mvtJ1;
+        RPSEnum mvtJ2;
+        while((mvtJ1 = p1.getNextMove()) != null && (mvtJ2 = p2.getNextMove()) != null){
+            switch(play(mvtJ1,mvtJ2)){
+                case WIN :
+                    p1.setScore();
+                    break;
+                case TIE :
+                    p1.setScore();
+                    p2.setScore();
+                    break;
+                case LOST :
+                    p2.setScore();
+                    break;
+                default :
+                    break;
+            }
+        }
+        if(p1.getScore() > p2.getScore()) {
+            return Result.WIN;
+        }
+        else if(p1.getScore() < p2.getScore()){
+            return Result.LOST;
+        }
+        else{
+            return Result.TIE;
+        }
+    }
 }

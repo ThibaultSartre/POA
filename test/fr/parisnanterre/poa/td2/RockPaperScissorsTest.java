@@ -10,10 +10,25 @@ import static org.testng.Assert.*;
 public class RockPaperScissorsTest {
 
     private RockPaperScissors rps;
+    private Player p1;
+    private Player p2;
 
     @BeforeMethod
     public void setUp() throws Exception {
         rps = new RockPaperScissors();
+    }
+
+    @BeforeMethod
+    public void setUpClass() throws Exception {
+        int mvt = 10;
+        p1 = new Player("Thibault",mvt);
+        p2 = new Player("Alexandre",mvt);
+    }
+
+    @AfterMethod
+    public void tearDownClass() throws Exception {
+        p1 = null;
+        p2 = null;
     }
 
     @AfterMethod
@@ -85,4 +100,8 @@ public class RockPaperScissorsTest {
     public void testPlayTIE(RPSEnum p1,RPSEnum p2) throws Exception {
         assertEquals(rps.play(p1,p2),Result.TIE);
     }
+
+
+
+
 }
