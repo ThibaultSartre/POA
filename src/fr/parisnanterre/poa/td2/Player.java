@@ -1,6 +1,7 @@
 package fr.parisnanterre.poa.td2;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by thsartre on 12/10/2017.
@@ -9,7 +10,11 @@ public class Player {
     private String nom;
     private int score;
     private int nb_mouvement;
-    private ArrayList<RPSEnum> listCoups;
+    private List<RPSEnum> listCoups;
+
+    public void addCoup(RPSEnum coup) {
+        this.listCoups.add(coup);
+    }
 
     public Player(String nom, ArrayList<RPSEnum> listCoups) {
         this.nom = nom;

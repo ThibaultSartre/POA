@@ -2,6 +2,9 @@ package fr.parisnanterre.poa.td2;
 
 import org.testng.annotations.*;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 import static org.testng.Assert.*;
 
 /**
@@ -20,9 +23,8 @@ public class RockPaperScissorsTest {
 
     @BeforeMethod
     public void setUpClass() throws Exception {
-        int mvt = 10;
-        p1 = new Player("Thibault",mvt);
-        p2 = new Player("Alexandre",mvt);
+        p1 = new Player("Thibault",new ArrayList<RPSEnum>());
+        p2 = new Player("Thibault",new ArrayList<RPSEnum>());
     }
 
     @AfterMethod
@@ -101,6 +103,54 @@ public class RockPaperScissorsTest {
         assertEquals(rps.play(p1,p2),Result.TIE);
     }
 
+    @Test
+    public void testPlayerPlayWin() throws Exception {
+        p1.addCoup(RPSEnum.PAPER);
+        p1.addCoup(RPSEnum.ROCK);
+        p1.addCoup(RPSEnum.SCISSORS);
+        p1.addCoup(RPSEnum.PAPER);
+
+        p2.addCoup(RPSEnum.SCISSORS);
+        p2.addCoup(RPSEnum.ROCK);
+        p2.addCoup(RPSEnum.PAPER);
+        p2.addCoup(RPSEnum.ROCK);
+
+        assertEquals(rps.play(p1,p2), Result.WIN);
+
+    }
+
+    @Test
+    public void testPlayerPlayLost() throws Exception {
+        p1.addCoup(RPSEnum.PAPER);
+        p1.addCoup(RPSEnum.ROCK);
+        p1.addCoup(RPSEnum.SCISSORS);
+        p1.addCoup(RPSEnum.PAPER);
+
+        p2.addCoup(RPSEnum.SCISSORS);
+        p2.addCoup(RPSEnum.ROCK);
+        p2.addCoup(RPSEnum.PAPER);
+        p2.addCoup(RPSEnum.SCISSORS);
+
+        assertEquals(rps.play(p1,p2), Result.LOST);
+
+    }
+
+
+    @Test
+    public void testPlayerPlayTie() throws Exception {
+        p1.addCoup(RPSEnum.PAPER);
+        p1.addCoup(RPSEnum.ROCK);
+        p1.addCoup(RPSEnum.SCISSORS);
+        p1.addCoup(RPSEnum.PAPER);
+
+        p2.addCoup(RPSEnum.SCISSORS);
+        p2.addCoup(RPSEnum.ROCK);
+        p2.addCoup(RPSEnum.PAPER);
+        p2.addCoup(RPSEnum.PAPER);
+
+        assertEquals(rps.play(p1,p2), Result.TIE);
+
+    }
 
 
 
