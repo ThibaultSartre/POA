@@ -8,7 +8,7 @@ public enum RPSEnum {
 
     private String name;
 
-    private RPSEnum(String name){
+    RPSEnum(String name){
         this.name = name;
     }
 
