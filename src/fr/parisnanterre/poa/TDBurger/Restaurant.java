@@ -6,6 +6,9 @@ package fr.parisnanterre.poa.TDBurger;
 public class Restaurant {
     private static Restaurant instance;
 
+    private Restaurant() {
+    }
+
     public static Restaurant queue(){
         if(instance == null){
             instance = new Restaurant();
