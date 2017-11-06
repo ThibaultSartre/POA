@@ -13,7 +13,11 @@ public class Restaurant {
         return instance;
     }
 
-    public Burger.BurgerBuilder menu(EnumMenu m){
+    public Burger.BurgerBuilder order_perso(EnumViande v){
+        return new Burger.BurgerBuilder(v);
+    }
+
+    public Burger.BurgerBuilder order_menu(EnumMenu m){
         Burger.BurgerBuilder bb = null;
         switch (m){
             case MENU_BOEUF :
