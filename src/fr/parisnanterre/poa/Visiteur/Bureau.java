@@ -25,7 +25,7 @@ import java.util.Set;
  * emails: pascal.poizat@lip6.fr
  */
 
-public class Bureau implements Truc {
+public class Bureau implements Truc, Visitable {
     Set<Truc> trucs;
 
     public Bureau() {
@@ -46,4 +46,10 @@ public class Bureau implements Truc {
         trucs.stream().forEach(Truc::afficher2);
         System.out.println("je suis un bureau");
     }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visit(this);
+    }
+
 }

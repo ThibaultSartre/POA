@@ -22,7 +22,7 @@ import fr.parisnanterre.poa.Visiteur.Truc;
  * emails: pascal.poizat@lip6.fr
  */
 
-public class Lit implements Truc {
+public class Lit implements Truc,Visitable {
     @Override
     public void afficher() {
         System.out.println("je suis un lit");
@@ -30,5 +30,10 @@ public class Lit implements Truc {
     @Override
     public void afficher2() {
         this.afficher();
+    }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visit(this);
     }
 }

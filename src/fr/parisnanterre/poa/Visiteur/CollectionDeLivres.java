@@ -22,7 +22,7 @@ package fr.parisnanterre.poa.Visiteur;
  * emails: pascal.poizat@lip6.fr
  */
 
-public class CollectionDeLivres implements Truc {
+public class CollectionDeLivres implements Truc, Visitable {
     private int nbLivres;
 
     public CollectionDeLivres(int nbLivres) {
@@ -36,5 +36,10 @@ public class CollectionDeLivres implements Truc {
     @Override
     public void afficher2() {
         this.afficher();
+    }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visit(this);
     }
 }

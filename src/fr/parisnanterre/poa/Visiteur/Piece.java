@@ -25,7 +25,7 @@ import java.util.Set;
  * emails: pascal.poizat@lip6.fr
  */
 
-public class Piece {
+public class Piece implements Visitable{
     private final String name;
     private Set<Truc> trucs;
 
@@ -45,5 +45,12 @@ public class Piece {
     public void afficher2() {
         trucs.stream().forEach(Truc::afficher2);
         System.out.println("je suis la piece "+name);
+    }
+
+    @Override
+    public void accept(Visitor v) {
+        for(Truc t : trucs){
+            t.accept(v);
+        }
     }
 }

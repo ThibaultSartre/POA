@@ -23,7 +23,7 @@ import java.util.Set;
  * emails: pascal.poizat@lip6.fr
  */
 
-public class Univers {
+public class Univers implements Visitable{
     private Set<Piece> pieces;
 
     public Univers() {
@@ -41,5 +41,12 @@ public class Univers {
     public void afficher2() {
         pieces.stream().forEach(Piece::afficher2);
         System.out.println("je suis l'univers");
+    }
+
+    @Override
+    public void accept(Visitor v) {
+        for(Piece p : pieces){
+            p.accept(v);
+        }
     }
 }
