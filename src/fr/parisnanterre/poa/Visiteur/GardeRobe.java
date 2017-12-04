@@ -25,7 +25,7 @@ import fr.parisnanterre.poa.Visiteur.Truc;
 import java.util.HashSet;
 import java.util.Set;
 
-public class GardeRobe implements Truc,Visitable {
+public class GardeRobe implements Truc{
     Set<Vetement> vetements;
 
     public GardeRobe() {

@@ -22,7 +22,7 @@ package fr.parisnanterre.poa.Visiteur;
  * emails: pascal.poizat@lip6.fr
  */
 
-public class CollectionDeLivres implements Truc, Visitable {
+public class CollectionDeLivres implements Truc{
     private int nbLivres;
 
     public CollectionDeLivres(int nbLivres) {

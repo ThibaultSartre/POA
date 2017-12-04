@@ -25,7 +25,7 @@ import java.util.Set;
  * emails: pascal.poizat@lip6.fr
  */
 
-public class Bureau implements Truc, Visitable {
+public class Bureau implements Truc{
     Set<Truc> trucs;
 
     public Bureau() {

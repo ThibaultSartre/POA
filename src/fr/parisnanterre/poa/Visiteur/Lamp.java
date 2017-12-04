@@ -22,7 +22,7 @@ import fr.parisnanterre.poa.Visiteur.Truc;
  * emails: pascal.poizat@lip6.fr
  */
 
-public class Lamp implements Truc, Visitable {
+public class Lamp implements Truc{
     @Override
     public void afficher() {
         System.out.println("je suis une lampe");

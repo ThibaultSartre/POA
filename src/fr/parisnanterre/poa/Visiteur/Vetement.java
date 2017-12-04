@@ -22,7 +22,7 @@ package fr.parisnanterre.poa.Visiteur;
  */
 
 
-public class Vetement implements Truc, Visitable {
+public class Vetement implements Truc {
     @Override
     public void afficher() {
         System.out.println("je suis un vetement");
