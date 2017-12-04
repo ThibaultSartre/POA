@@ -24,7 +24,7 @@ import java.util.Set;
  */
 
 public class Univers implements Visitable{
-    private Set<Piece> pieces;
+    public Set<Piece> pieces;
 
     public Univers() {
         this.pieces = new HashSet<Piece>();

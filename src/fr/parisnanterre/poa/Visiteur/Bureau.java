@@ -26,7 +26,7 @@ import java.util.Set;
  */
 
 public class Bureau implements Truc{
-    Set<Truc> trucs;
+    public Set<Truc> trucs;
 
     public Bureau() {
         this.trucs = new HashSet<Truc>();

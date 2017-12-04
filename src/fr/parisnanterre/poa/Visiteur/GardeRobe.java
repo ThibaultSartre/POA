@@ -26,7 +26,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class GardeRobe implements Truc{
-    Set<Vetement> vetements;
+    public Set<Vetement> vetements;
 
     public GardeRobe() {
         this.vetements = new HashSet<Vetement>();

@@ -6,7 +6,10 @@ package fr.parisnanterre.poa.Visiteur;
 public class Visitor1 implements Visitor {
     @Override
     public void visit(Univers e) {
-
+        System.out.println("Je suis un univers");
+        for(Piece p : e.pieces){
+            p.accept(this);
+        }
     }
 
     @Override
@@ -16,7 +19,10 @@ public class Visitor1 implements Visitor {
 
     @Override
     public void visit(Piece e) {
-
+        System.out.println("Je suis une pièce");
+        for(Truc t : e.trucs){
+            t.accept(this);
+        }
     }
 
     @Override
@@ -31,7 +37,10 @@ public class Visitor1 implements Visitor {
 
     @Override
     public void visit(GardeRobe e) {
-
+        System.out.println("Je suis une garde robe");
+        for(Vetement v : e.vetements){
+            v.accept(this);
+        }
     }
 
     @Override
@@ -41,6 +50,9 @@ public class Visitor1 implements Visitor {
 
     @Override
     public void visit(Bureau e) {
-
+        System.out.println("Je suis un bureau");
+        for(Truc t : e.trucs){
+            t.accept(this);
+        }
     }
 }
