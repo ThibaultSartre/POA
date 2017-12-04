@@ -49,8 +49,6 @@ public class Piece implements Visitable{
 
     @Override
     public void accept(Visitor v) {
-        for(Truc t : trucs){
-            t.accept(v);
-        }
+        v.visit(this);
     }
 }

@@ -45,8 +45,6 @@ public class Univers implements Visitable{
 
     @Override
     public void accept(Visitor v) {
-        for(Piece p : pieces){
-            p.accept(v);
-        }
+        v.visit(this);
     }
 }
