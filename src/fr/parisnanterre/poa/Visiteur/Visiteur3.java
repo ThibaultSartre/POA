@@ -3,18 +3,25 @@ package fr.parisnanterre.poa.Visiteur;
 /**
  * Created by thsartre on 04/12/2017.
  */
-public class Visitor2 implements Visitor {
+public class Visiteur3 implements VisiteurAvecValeur {
+
+    private int nb;
+
+    @Override
+    public Object value() {
+        return nb;
+    }
+
     @Override
     public void visit(Univers e) {
         for(Piece p : e.pieces){
             p.accept(this);
         }
-        System.out.println("Je suis un univers");
     }
 
     @Override
     public void visit(Vetement e) {
-        System.out.println("Je suis un vetement");
+        nb += 1;
     }
 
     @Override
@@ -22,17 +29,16 @@ public class Visitor2 implements Visitor {
         for(Truc t : e.trucs){
             t.accept(this);
         }
-        System.out.println("Je suis une pièce");
     }
 
     @Override
     public void visit(Lit e) {
-        System.out.println("Je suis un lit");
+        nb += 1;
     }
 
     @Override
     public void visit(Lamp e) {
-        System.out.println("Je suis une lampe");
+        nb += 1;
     }
 
     @Override
@@ -40,12 +46,11 @@ public class Visitor2 implements Visitor {
         for(Vetement v : e.vetements){
             v.accept(this);
         }
-        System.out.println("Je suis une garde robe");
     }
 
     @Override
     public void visit(CollectionDeLivres e) {
-        System.out.println("Je suis une collection de " + e.getNbLivres() + " livre(s)");
+        nb += e.getNbLivres();
     }
 
     @Override
@@ -53,6 +58,5 @@ public class Visitor2 implements Visitor {
         for(Truc t : e.trucs){
             t.accept(this);
         }
-        System.out.println("Je suis un bureau");
     }
 }
