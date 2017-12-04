@@ -11,7 +11,7 @@ public class Visitor1 implements Visitor {
 
     @Override
     public void visit(Vetement e) {
-
+        System.out.println("Je suis un vetement");
     }
 
     @Override
@@ -21,12 +21,12 @@ public class Visitor1 implements Visitor {
 
     @Override
     public void visit(Lit e) {
-
+        System.out.println("Je suis un lit");
     }
 
     @Override
     public void visit(Lamp e) {
-
+        System.out.println("Je suis une lampe");
     }
 
     @Override
@@ -36,7 +36,7 @@ public class Visitor1 implements Visitor {
 
     @Override
     public void visit(CollectionDeLivres e) {
-
+        System.out.println("Je suis une collection de " + e.getNbLivres() + " livre(s)");
     }
 
     @Override

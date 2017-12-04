@@ -21,6 +21,4 @@ package fr.parisnanterre.poa.Visiteur;
  */
 
 public interface Truc extends Visitable {
-    void afficher();
-    void afficher2();
 }

@@ -38,14 +38,6 @@ public class Piece implements Visitable{
         trucs.add(truc);
     }
 
-    public void afficher() {
-        System.out.println("je suis la piece "+name);
-        trucs.stream().forEach(Truc::afficher);
-    }
-    public void afficher2() {
-        trucs.stream().forEach(Truc::afficher2);
-        System.out.println("je suis la piece "+name);
-    }
 
     @Override
     public void accept(Visitor v) {

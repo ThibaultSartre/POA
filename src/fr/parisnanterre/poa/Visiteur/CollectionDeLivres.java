@@ -29,13 +29,8 @@ public class CollectionDeLivres implements Truc{
         this.nbLivres = nbLivres;
     }
 
-    @Override
-    public void afficher() {
-        System.out.println("je suis une collection de "+nbLivres+" livres");
-    }
-    @Override
-    public void afficher2() {
-        this.afficher();
+    public int getNbLivres() {
+        return nbLivres;
     }
 
     @Override

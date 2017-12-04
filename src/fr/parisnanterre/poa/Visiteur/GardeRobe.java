@@ -37,17 +37,6 @@ public class GardeRobe implements Truc{
     }
 
     @Override
-    public void afficher() {
-        System.out.println("je suis une garde robe");
-        vetements.stream().forEach(Vetement::afficher);
-    }
-    @Override
-    public void afficher2() {
-        vetements.stream().forEach(Vetement::afficher2);
-        System.out.println("je suis une garde robe");
-    }
-
-    @Override
     public void accept(Visitor v) {
         v.visit(this);
     }

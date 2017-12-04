@@ -34,14 +34,6 @@ public class Univers implements Visitable{
         pieces.add(truc);
     }
 
-    public void afficher() {
-        System.out.println("je suis l'univers");
-        pieces.stream().forEach(Piece::afficher);
-    }
-    public void afficher2() {
-        pieces.stream().forEach(Piece::afficher2);
-        System.out.println("je suis l'univers");
-    }
 
     @Override
     public void accept(Visitor v) {

@@ -24,15 +24,6 @@ import fr.parisnanterre.poa.Visiteur.Truc;
 
 public class Lamp implements Truc{
     @Override
-    public void afficher() {
-        System.out.println("je suis une lampe");
-    }
-    @Override
-    public void afficher2() {
-        this.afficher();
-    }
-
-    @Override
     public void accept(Visitor v) {
         v.visit(this);
     }

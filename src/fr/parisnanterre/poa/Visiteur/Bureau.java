@@ -37,17 +37,6 @@ public class Bureau implements Truc{
     }
 
     @Override
-    public void afficher() {
-        System.out.println("je suis un bureau");
-        trucs.stream().forEach(Truc::afficher);
-    }
-    @Override
-    public void afficher2() {
-        trucs.stream().forEach(Truc::afficher2);
-        System.out.println("je suis un bureau");
-    }
-
-    @Override
     public void accept(Visitor v) {
         v.visit(this);
     }
