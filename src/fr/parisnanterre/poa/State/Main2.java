@@ -12,6 +12,7 @@ public class Main2 {
         m.askCoffee();
         m.give(10);
         m.askTea();
+        m.give(20);
         System.out.println(m.getRefound());
         System.out.println(m.getRefound());
         m.askCoffee();
