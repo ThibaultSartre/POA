@@ -16,7 +16,6 @@ public class StateInsert implements State {
         if((c + n) < 10){
            c += n;
         }else{
-            c = 0;
             m.setState(new StateGive());
         }
     }
